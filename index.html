@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de AdryByte</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado del portafolio -->
+    <header class="header">
+        <div class="header-content">
+            <img src="imagenes/Imagenes/Logosinfondo.png" alt="Logo de AdryByte" class="logo"> <!-- Imagen a la izquierda -->
+            <h1 class="titulo">ADRYBYTE</h1> <!-- Título centrado -->
+        </div>
+        
+        <!-- Barra de navegación -->
+        <nav class="navegacion">
+            <ul class="lista-navegacion">
+                <li><a href="#sobre-mi">Sobre mí</a></li> <!-- Enlace a la sección "Sobre mí" -->
+                <li><a href="#proyectos">Proyectos</a></li> <!-- Enlace a la sección "Proyectos" -->
+                <li><a href="#habilidades">Habilidades</a></li> <!-- Enlace a la sección "Habilidades" -->
+                <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección "Contacto" -->
+            </ul>
+        </nav>
+    </header>
+    <div class="cookie-notice" id="cookie-notice">
+        <img src="imagenes/Imagenes/galleta.png" alt="Uso de cookies" class="cookie-image">
+        <div class="cookie-content">
+            <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. <a href="#">Leer más</a></p>
+            <a href="#close" class="close-cookie-notice">✖</a>
+        </div>
+    </div>
+        <!-- Sección "Sobre mí" -->
+        <section id="sobre-mi" class="sobre-mi">
+            <div class="tarjeta">
+                <h2>Sobre mí</h2>
+                <p>¡Hola! Soy AdryByte, un apasionado de la tecnología y el desarrollo web. He estudiado programación y diseño web, y he trabajado en varios proyectos que me han permitido crecer profesionalmente. Me encanta aprender nuevas tecnologías y compartir mis conocimientos.</p>
+                <div class="redes-sociales">
+                    <a href="https://www.github.com"><img src="imagenes/Imagenes/github.png" alt="Icono Github"></a>
+                    <a href="https://www.twitch.tv"><img src="imagenes/Imagenes/twitch.png" alt="Icono twitch"></a>
+                    <a href="https://www.twitter.com"><img src="imagenes/Imagenes/twitter.png" alt="Icono twitter"></a>
+                </div>
+            </div>
+        </section>
+<!-- Sección "Proyectos" -->
+<section id="proyectos" class="proyectos">
+    <h2>Proyectos</h2>
+    <div class="cuadricula-proyectos">
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/Barra de habilidades.jpg" alt="barra habilidades">
+            <h3>Barra de Habilidades</h3>
+            <p>Barra moderna para mostrar las habilidades de un desarrollador.</p>
+        </div>
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/boton neon.jpg" alt="boton neon">
+            <h3>Botones Neón</h3>
+            <p>Botones con efecto neon para dar un toque de modernidad a tus proyectos.</p>
+        </div>
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/formulario de registro.jpg" alt="Formulario de Registro">
+            <h3>Formulario de Registro</h3>
+            <p>Formulario elegante para una pagina web en la que se requiera un registro</p>
+        </div>
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/botonesredessociales.gif" alt="Botones de Redes Sociales Gif">
+            <h3>Botones Redes Sociales</h3>
+            <p>Con este efecto podras dar un entorno mas agradable a tus botones de redes sociales</p>
+        </div>
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/barra de nanvegacion.jpg" alt="Barra de navegacion">
+            <h3>Barra de Navegacion</h3>
+            <p>Con esta barra de navegacion podras dar un toque de modernidad a tus proyectos</p>
+        </div>
+        <div class="proyecto">
+            <img src="imagenes/Proyectos/formulario contacto.jpg" alt="Formulario de Contacto">
+            <h3>Formulario de Contacto</h3>
+            <p>Este es un formulario de contacto que podras utilizar en tus proyectos</p>
+        </div>
+    </div>
+</section>
+<!-- Sección "Habilidades" -->
+<section id="habilidades" class="skill">
+        <h2>Habilidades</h2>
+        <div class="habilidades">
+         <div class="habilidad">
+            <h3>HTML</h3>
+            <div class="barra-progreso">
+                <div class="progreso html-progreso">90%</div>
+            </div>
+        </div>
+        <div class="habilidad">
+            <h3>CSS</h3>
+            <div class="barra-progreso">
+                <div class="progreso css-progreso"><p>70%</p></div>
+            </div>
+        </div>
+        <!-- Agrega más habilidades aquí si es necesario -->
+    </div>
+</section>
+<!-- Sección de Contacto -->
+<section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p class="contactos">¿Quieres encontrar la manera de trabajar juntos?</p>
+    <div class="tarjetaformulario">
+        <form class="formulario-contacto">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="boton-enviar">Enviar</button>
+        </form>
+    </div>
+</section>
+<!-- Pie de Página -->
+<footer class="footer">
+    <p>© 2024 AdryByte</p>
+</footer>
+</body>
+</html>

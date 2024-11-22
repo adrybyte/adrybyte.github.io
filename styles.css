@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+html {
+    scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 36px;
+    margin-top: 15px;
+}
+
+/* Estilos generales del body */
+body {
+    margin: auto; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+    font-family: Arial, sans-serif; /* Fuente del texto */ 
+}
+.header {
+    display: flex; /* Usar flexbox para alinear elementos */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px; /* Espaciado interno */
+}
+/* Contenedor para logo y título */
+.header-content {
+    display: flex; /* Usar flexbox para alinear logo y título en fila */
+    align-items: center; /* Centrar verticalmente el logo y el título */
+}
+
+/* Estilos de la imagen del logo */
+.logo {
+    width: 90px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener proporciones */
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilos del título */
+.titulo {
+    font-size: 2em; /* Tamaño de fuente del título */
+    color: #000002; /* Color del texto del título */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+/* Contenedor para logo y título */
+.header-content {
+    display: flex; /* Usar flexbox para alinear logo y título en fila */
+    align-items: center; /* Centrar verticalmente el logo y el título */
+}
+/* ESTILOS DE BARRA DE NAVEGACION */
+.navegacion {
+    text-align: center; /* Centrar el texto en la barra */
+    margin-bottom: -12px; /* Margen superior e inferior */
+}
+
+.lista-navegacion {
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.lista-navegacion li {
+    display: inline; /* Mostrar los elementos de la lista en línea */
+    margin: 0 15px; /* Espacio entre los elementos */
+}
+
+.lista-navegacion a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    color: #333; /* Color del texto de los enlaces */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave para el color */
+    padding: 5px; /* Espaciado interno para hacer clic más fácil */
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+.lista-navegacion a:hover {
+    color: #4CAF50; /* Cambiar el color del texto al pasar el ratón */
+}
+
+/* COOKIES */
+.cookie-notice {
+    /* Estilos para la tarjeta de cookies */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #FFEFBA;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    animation: fadeOut 5s forwards; /* Agregar animación */
+    animation-delay: 5s; /* Retrasar la animación 5 segundos */
+}
+
+.cookie-image {
+    width: 40px; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener proporciones */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.cookie-content {
+    flex-grow: 1; /* Permitir que el contenido crezca */
+}
+
+.close-cookie-notice {
+    background-color: #FF6B6B; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hacer el botón redondo */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Alto del botón */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición de color */
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.close-cookie-notice:hover {
+    background-color: #FF4D4D; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo para ocultar el aviso cuando se hace clic en el botón */
+.cookie-notice:target {
+    display: none; /* Ocultar el elemento */
+}
+
+/* Estilo para ocultar el aviso cuando se hace clic en el botón */
+.cookie-notice:target {
+    display: none; /* Ocultar el elemento */
+} 
+/* ESTILOS DE LA SECCION "SOBRE MI" */
+.sobre-mi {
+    display: flex;
+    justify-content: center; /* Centrar la tarjeta horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background: #00C9FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Estilos de la tarjeta */
+.tarjeta {
+    background-color: #e6eef7; /* Color de fondo suave */
+    border-radius: 15px 50px 30px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 14px 14px 20px 0 rgba(15, 15, 15, 0.3); /* Sombra alrededor de la tarjeta */
+    width: 300px; /* Ancho de la tarjeta */
+    text-align: center; /* Centrar el texto */
+    opacity: 0; /* Inicialmente oculto para la animación */
+    transform: translateY(20px); /* Desplazar hacia abajo para la animación */
+    animation: fadeIn 0.5s forwards; /* Animación de aparición */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Hacer visible */
+        transform: translateY(0); /* Volver a la posición original */
+    }
+}
+
+/* Estilos de los íconos de redes sociales */
+.redes-sociales {
+    margin-top: 15px; /* Espacio superior para los íconos */
+}
+
+.redes-sociales a {
+    margin: 0 10px; /* Espaciado entre los íconos */
+}
+
+.redes-sociales img {
+    width: 30px; /* Tamaño de los íconos */
+    height: auto; /* Mantener proporciones */
+    overflow:hidden;
+}
+
+/* Efecto hover en los íconos de redes sociales */
+.redes-sociales a:hover img {
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+
+
+/* ESTILOS DE LA SECCION "PROYECTOS" */
+.proyectos {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.proyectos h2 {
+    margin-bottom: 20px; /* Espacio inferior del título */
+}
+
+/* Estilos de la cuadrícula de proyectos */
+.cuadricula-proyectos {
+    display: grid; /* Usar flexbox para la cuadrícula */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 30px; /* Espacio entre los proyectos */
+    max-width: 800px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* Estilos de cada proyecto */
+.proyecto {
+    background-color: #F0F4F8; /* Color de fondo para cada proyecto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3); /* Sombra alrededor del proyecto */
+    width: 300px; /* Ancho de cada proyecto */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto dentro del proyecto */
+    transition: transform 0.3s; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover en cada proyecto */
+.proyecto:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al pasar el ratón */
+}
+
+/* Estilos de las imágenes de los proyectos */
+.proyecto img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del proyecto */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    height: auto; /* Mantener proporciones de la imagen */
+}
+
+.proyecto h3 {
+    margin: 10px 0; /* Espacio superior e inferior del título */
+}
+
+.proyecto p {
+    font-size: 0.9em; /* Tamaño de fuente de la descripción */
+    color: #4A4E69; /* Color del texto de la descripción */
+}
+
+/* Estilos de la sección "Habilidades" */
+.progreso-html-progreso{
+    text-align: center;
+}
+.skill{
+    padding: 20px;
+    background: #83a4d4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #053638, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1b97e9, #a2b2c9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.habilidades {
+    background-color: #d8eafc; /* Color de fondo suave */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la tarjeta */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar la tarjeta */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+/* Estilos de cada habilidad */
+.habilidad {
+    margin-bottom: 30px; /* Espacio entre habilidades */
+}
+
+/* Estilos de la barra de progreso */
+.barra-progreso {
+    background-color: #e0e0e0; /* Fondo de la barra */
+    border-radius: 10px; /* Bordes redondeados */
+    height: 20px; /* Altura de la barra */
+    width: 100%; /* Ancho completo */
+    margin-top: 5px; /* Espacio superior */
+    overflow: hidden; /* Ocultar el contenido que sobresale */
+}
+
+/* Estilos de la barra de progreso interna */
+.progreso {
+    height: 100%; /* Altura de la barra de progreso */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 0; /* Comenzar desde 0% */
+    animation-duration: 1s; /* Duración de la animación */
+    animation-fill-mode: forwards; /* Mantener el estado final de la animación */
+}
+
+/* Animación de llenado para HTML */
+.html-progreso {
+    background-color: #4CAF50; /* Color de la barra de progreso */
+    animation-name: fill-html; /* Nombre de la animación */
+}
+
+/* Animación de llenado para CSS */
+.css-progreso {
+    background-color: #4CAF50; /* Color de la barra de progreso */
+    animation-name: fill-css-progreso; /* Nombre de la animación */
+    animation-delay: 1s; /* Retraso para que inicie después de HTML */
+}
+
+/* Keyframes para la animación de HTML */
+@keyframes fill-html {
+    from {
+        width: 0; /* Comienza en 0% */
+    }
+    to {
+        width: 90%; /* Cambia a 90% para HTML */
+    }
+}
+
+/* Keyframes para la animación de CSS */
+@keyframes fill-css-progreso {
+    from {
+        width: 0; /* Comienza en 0% */
+    }
+    to {
+        width: 70%; /* Cambia a 70% para CSS */
+    }
+}
+
+/* ESTILOS DE CONTACTO */
+.contacto {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #83a4d4, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    margin: 0;
+}
+.contactos{
+    text-align: center;
+    margin: 15px;
+}
+.tarjetaformulario{
+    background-color: #d8eafc; /* Color de fondo suave */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la tarjeta */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: 0 auto; /* Centrar la tarjeta */
+}
+/* Estilos del formulario */
+.formulario-contacto {
+    display: flex; /* Usar flexbox para alinear los campos */
+    flex-direction: column; /* Colocar los campos en columna */
+    align-items: center; /* Centrar los elementos */
+}
+
+/* Estilos de los campos */
+.campo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Ancho completo */
+    max-width: 300px; /* Ancho máximo de los campos */
+    margin: 10px 0; /* Espacio superior e inferior entre campos */
+}
+
+.campo label {
+    display: block; /* Mostrar la etiqueta como bloque */
+    margin-bottom: 5px; /* Espacio inferior de la etiqueta */
+}
+.campo input,
+.campo textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Efecto al pasar el ratón sobre los campos */
+.campo input:hover,
+.campo textarea:hover {
+    border-color: #4CAF50; /* Cambiar el color del borde al pasar el ratón */
+}
+
+/* Estilos del botón */
+.boton-enviar {
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.boton-enviar:hover {
+    background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón */
+}
+/* Estilos del pie de página */
+.footer {
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #19d45e, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #17e462, #e8f0ed); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    color: rgb(10, 10, 10); /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 15px; /* Espaciado interno */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0; /* Alinear al fondo */
+    width: 100%; /* Ancho completo */
+    margin-top: 0px; /* Margen superior para separación */
+}
+
+.footer p {
+    text-align: center;
+    margin: 0; /* Sin margen */
+    font-size: 20px; /* Tamaño de fuente del texto */
+}
